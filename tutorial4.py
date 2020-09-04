@@ -3,11 +3,11 @@ import numpy as np
 
 
 def fill_color_demo(image):
-    copyImg = image.copy()
+    copyimg = image.copy()
     h, w = image.shape[:2]
     mask = np.zeros([h+2, w+2], np.uint8)    #注意+2
-    cv.floodFill(copyImg, mask, (30, 30), (100, 10, 10), (100, 100, 100), (50, 50, 50), cv.FLOODFILL_FIXED_RANGE)
-    cv.imshow('fill_color_demo', copyImg)
+    cv.floodFill(copyimg, mask, (30, 30), (100, 10, 10), (100, 100, 100), (50, 50, 50), cv.FLOODFILL_FIXED_RANGE)
+    cv.imshow('fill_color_demo', copyimg)
 
 
 def fill_binary():
@@ -21,8 +21,8 @@ def fill_binary():
 
 
 print('-----Hello Python------')
-src = cv.imread('C:/Users/JIE/Desktop/illustration/picture/1.jpg')
-src1 = cv.imread('C:/Users/JIE/Desktop/illustration/picture/2.jpg')
+src = cv.imread('/home/jie-5/桌面/image/reba/iamge1.jpg')
+src1 = cv.imread('/home/jie-5/桌面/image/reba/iamge2.jpg')
 
 cv.namedWindow('input image', cv.WINDOW_AUTOSIZE)
 cv.imshow('input image', src)

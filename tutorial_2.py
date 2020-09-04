@@ -30,7 +30,7 @@ def color_space_demo(image):
     cv.imshow('Ycrcb', Ycrcb)
 
 
-src = cv.imread('C:/Users/JIE/Desktop/illustration/picture/1.jpg')
+src = cv.imread('/home/jie-5/桌面/image/reba/iamge1.jpg')
 cv.namedWindow('imput image', cv.WINDOW_AUTOSIZE)
 cv.imshow('imput image', src)
 extrace_object()
