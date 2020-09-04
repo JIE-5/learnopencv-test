@@ -3,7 +3,7 @@ import numpy as np
 
 
 def edge_demo(image):
-    blurred = cv.GaussianBlur(image, (7, 7), 0)
+    blurred = cv.GaussianBlur(image, (0, 0), 0.7)
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     # X Gradient
     xgrad = cv.Sobel(gray, cv.CV_16SC1, 1, 0)
@@ -17,10 +17,10 @@ def edge_demo(image):
 
 
 print('-----Hello Python------')
-src = cv.imread('/home/jie-5/桌面/image/reba/iamge1.jpg')
+src = cv.imread('/home/jie-5/桌面/image/reba/timg.jpeg')
 src1 = cv.imread('/home/jie-5/桌面/image/reba/image2.jpg')
 cv.namedWindow('input image', cv.WINDOW_AUTOSIZE)
-cv.imshow('input image', src)
+# cv.imshow('input image', src)
 edge_demo(src)
 
 cv.waitKey(0)
