@@ -8,11 +8,21 @@ def faceal_ID_demo():
     cv2.namedWindow('face')
 
     while True:
-        ret, farme = camera.read()
-        if ret :
-            gray_farme = cv2.cvtColor(farme, cv2.COLOR_BGR2GRAY)
-            face = face_casecade.detectMultiScale(gray_farme, 1.3, 2)
-            cv2.imshow('face', farme)
+        ret, frame = camera.read()
+        if not ret :
+            break
+        gray_farme = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+        face = face_casecade.detectMultiScale(gray_farme, 1.3, 2)
+        print(face)
+        for x, y, w, h in face:
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 0, 255), 2)
+            # print(x)
+            # print(face)
+        cv2.imshow('face', frame)
+        c = cv2.waitKey(40)
+        if c == 27:
+            break
+
 
 
 faceal_ID_demo()
