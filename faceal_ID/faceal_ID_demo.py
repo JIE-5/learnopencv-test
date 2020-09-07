@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 
+#test
 def faceal_ID_demo():
     face_casecade=cv2.CascadeClassifier('/home/jie-5/learnopencv-test/faceal_ID/haarcascade_frontalface_alt.xml')
     camera = cv2.VideoCapture(0)
